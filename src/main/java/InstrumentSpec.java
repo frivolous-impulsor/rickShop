@@ -26,15 +26,17 @@ public class InstrumentSpec {
 		return properties;
 	}
 	
-	public void matches(InstrumentSpec otherSpec) {
+	public boolean matches(InstrumentSpec otherSpec) {
 		for (Iterator i = otherSpec.getProperties().keySet().iterator(); i.hasNext();) {
 			Property p = (Property) i.next();
 			if(otherSpec.getProperty(p) != this.getProperty(p)) {
 				System.out.println("property " + p + " not fit");
+				return false;
 			}else {
 				System.out.println("property " + p + " fit");
 			}
 			
 		}
+		return true;
 	}
 }

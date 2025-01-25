@@ -13,14 +13,14 @@ public class main {
 		
 		Map prop = new HashMap();
 		prop.put(Property.BUILDER, Builder.GLORE);
-		prop.put(Property.WOOD, Wood.PLAIN);
+		prop.put(Property.WOOD, Wood.DARK);
 		prop.put(Property.INSTYPE, InstrumentType.GUITAR);
 		
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
-		invSpec.matches(clientSpec);
+		boolean result = invSpec.matches(clientSpec);
 		
 		
-		//System.out.println(w);
+		System.out.println("match: " + result);
 		
 	}
 }

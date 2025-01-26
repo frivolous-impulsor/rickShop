@@ -8,12 +8,16 @@ public class InstrumentSpec {
 	
 	public InstrumentSpec(Map props) {
 		if (props.isEmpty()) {
-			System.out.println("empty hashmap added to instrumentSpec");
+			//System.out.println("empty hashmap added to instrumentSpec");
 			this.properties = new HashMap();
 		}else {
-			System.out.println("non-empty hashmap added to instrumentSpec");
+			//System.out.println("non-empty hashmap added to instrumentSpec");
 			this.properties = new HashMap(props);
 		}
+	}
+	
+	public boolean isEmptySpec() {
+		return properties.isEmpty();
 	}
 	
 	//getting the value of property from the name of the property

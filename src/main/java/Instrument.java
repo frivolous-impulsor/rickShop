@@ -5,7 +5,7 @@ public class Instrument {
 	private double price;
 	private InstrumentSpec spec;
 	
-	public Instrument(String sn, double p, InstrumentSpec s) {
+	public Instrument(String sn, double p, InstrumentSpec s) throws IllegalArgumentException {
 		if(sn.length() == 0) {
 			throw new IllegalArgumentException("Serial number cannot be empty");
 		}
@@ -25,6 +25,7 @@ public class Instrument {
 	public String getSN() {
 		return serialNumber;
 	}
+	
 	
 	public double getPrice() {
 		return price;

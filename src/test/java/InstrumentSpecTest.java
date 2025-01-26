@@ -32,7 +32,7 @@ class InstrumentSpecTest {
 		prop.put(Property.INSTYPE, InstrumentType.GUITAR);
 		
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
-		boolean result = invSpec.matches(clientSpec);
+		boolean result = invSpec.matchesToClient(clientSpec);
 		assertTrue(result);
 	}
 	
@@ -47,7 +47,7 @@ class InstrumentSpecTest {
 		Map prop = new HashMap();		
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
 		
-		boolean result = invSpec.matches(clientSpec);
+		boolean result = invSpec.matchesToClient(clientSpec);
 		assertFalse(result);
 	}
 
@@ -65,7 +65,7 @@ class InstrumentSpecTest {
 		prop.put(Property.INSTYPE, InstrumentType.GUITAR);
 		
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
-		boolean result = invSpec.matches(clientSpec);
+		boolean result = invSpec.matchesToClient(clientSpec);
 		assertTrue(result);
 	}
 	
@@ -84,7 +84,7 @@ class InstrumentSpecTest {
 		prop.put(Property.INSTYPE, InstrumentType.GUITAR);
 		
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
-		boolean result = invSpec.matches(clientSpec);
+		boolean result = invSpec.matchesToClient(clientSpec);
 		assertTrue(result);
 	}
 	
@@ -102,7 +102,7 @@ class InstrumentSpecTest {
 		prop.put(Property.INSTYPE, InstrumentType.GUITAR);
 		InstrumentSpec invSpec = new InstrumentSpec(prop);
 		
-		boolean result = invSpec.matches(clientSpec);
+		boolean result = invSpec.matchesToClient(clientSpec);
 		assertFalse(result);
 	}
 

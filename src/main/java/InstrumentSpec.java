@@ -30,7 +30,8 @@ public class InstrumentSpec {
 		return properties;
 	}
 	
-	public boolean matches(InstrumentSpec otherSpec) {
+	//the method checks in perspective of "otherSpec", in our context, this should be the client spec
+	public boolean matchesToClient(InstrumentSpec otherSpec) {
 		for (Iterator i = otherSpec.getProperties().keySet().iterator(); i.hasNext();) {
 			Property p = (Property) i.next();
 			if(otherSpec.getProperty(p) != this.getProperty(p)) {
